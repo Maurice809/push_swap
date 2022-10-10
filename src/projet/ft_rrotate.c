@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 08:59:19 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/10/03 15:00:16 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/10/11 00:05:25 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static void	reverse_rotate(int *stack, int count)
 	int	i;
 	int	temp;
 
-	i = count;
+	i = count + 1;
 	temp = stack[count -1];
-	while (i-- > 0)
+	while (--i > 0)
 		stack[i] = stack[i -1];
 	stack[0] = temp;
 }

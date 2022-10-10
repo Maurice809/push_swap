@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 08:38:07 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/10/03 12:58:01 by tmoret           ###   ########.fr       */
+/*   Updated: 2022/10/10 23:57:54 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	rotate(int *stack, int count)
 
 	i = -1;
 	temp = stack[0];
-	while (++i < count)
+	while (++i < count - 1)
 		stack[i] = stack[i +1];
 	stack[count -1] = temp;
 }

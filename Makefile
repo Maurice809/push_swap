@@ -6,7 +6,7 @@
 #    By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 16:49:57 by Maurice809        #+#    #+#              #
-#    Updated: 2022/10/10 22:45:24 by tmoret           ###   ########.fr        #
+#    Updated: 2022/10/11 00:22:01 by tmoret           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,8 +59,8 @@ SRC		= main.c \
 OBJ		= $(addprefix $(OBJDIR)/,$(SRC:.c=.o))
 
 # compiler
-CC		= cc
-CFLAGS	= -Wall -Werror -g -Wextra
+CC		= clang
+CFLAGS	= -Wall -Werror -g -Wextra # -fsanitize=address
 
 ifeq ($(DEBUG), debug)
 	CFLAGS += -fsanitize=address -g3
@@ -70,7 +70,7 @@ endif
 FT		= ./src/libft/
 FT_LIB	= $(addprefix $(FT),libft.a)
 FT_INC	= -I ./src/libft
-FT_LNK	= -L ./src/libft -l ft -l pthread
+FT_LNK	= -L ./src/libft -l ft 
 
 all: obj $(FT_LIB) $(NAME) 
 
@@ -86,8 +86,7 @@ $(FT_LIB):
 	@make -C $(FT)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ)  $(FT_LNK) -lm -o $(NAME)	
-#	-fsanitize=address
+	$(CC) $(CFLAGS) $(OBJ)  $(FT_LNK) -lm -o $(NAME)
 
 clean:
 	rm -rf $(OBJDIR)
