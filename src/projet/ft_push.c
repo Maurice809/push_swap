@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 09:13:20 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/10/09 19:14:17 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/10/10 21:30:26 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	push(int *from, int *to, int *count_from, int *count_to)
 
 void	pa(t_state *state)
 {
-	if (state->b_count > 0 )
+	if (state->b_count > 0)
 	{
 		push(state->b, state->a, &state->b_count, &state->a_count);
 		ft_printf("pa\n");
@@ -40,7 +40,7 @@ void	pa(t_state *state)
 
 void	pb(t_state *state)
 {
-	if (state->a_count > 0 )
+	if (state->a_count > 0)
 	{
 		push(state->a, state->b, &state->a_count, &state->b_count);
 		ft_printf("pb\n");

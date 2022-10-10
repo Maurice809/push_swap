@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 22:17:04 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/10/05 16:46:36 by tmoret           ###   ########.fr       */
+/*   Updated: 2022/10/10 21:29:35 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@ int	ft_checsar(char **argv)
 		return (0);
 	else
 		return (-1);
+}
+
+static void	ft_chectable(int i)
+{
+	if (i == 1)
+		ft_error(2);
 }
 
 int	ft_checarg(char **argv)
@@ -44,6 +50,7 @@ int	ft_checarg(char **argv)
 				ft_checinit(argv[i], p);
 		}
 	}
+	ft_chectable(i);
 	ft_checdouble(argv);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 22:36:36 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/10/06 14:26:57 by tmoret           ###   ########.fr       */
+/*   Updated: 2022/10/10 22:44:11 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_checdouble(char **argv)
 	int	k;
 
 	i = ft_checsar(argv);
-	p = 1;
+	p = 1 - ft_checsar(argv);
 	k = 0;
 	while (argv[++i])
 	{

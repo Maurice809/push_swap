@@ -6,7 +6,7 @@
 #    By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 16:49:57 by Maurice809        #+#    #+#              #
-#    Updated: 2022/10/09 18:12:51 by Maurice809       ###   Lausanne.ch        #
+#    Updated: 2022/10/10 22:45:24 by tmoret           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,9 +52,6 @@ SRC		= main.c \
 		  ft_checktri.c \
 		  ft_str.c \
 		  ft_sort_radix.c \
-		  ft_sort_quick.c \
-		  ft_sort_quick_a.c \
-		  ft_sort_quick_b.c \
 		  ft_simplify.c \
 
 #		  $(addprefix so_long/,$(shell ls $(SRCDIR)/so_long | grep -E ".+\.c"))

@@ -6,7 +6,7 @@
 /*   By: tmoret <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 05:38:34 by tmoret            #+#    #+#             */
-/*   Updated: 2022/10/09 18:38:45 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/10/10 21:35:12 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,5 @@ void	ft_sort_quick_a(t_state *state)
 			else
 				ra(state);
 		}
-//		k = b;
 	}
-/*	k = state->b_count / 4;
-	while (state->b_count > k)
-	{
-		while (state->b[ft_fmax_b(state)] != state->b[0])
-        rb(state);
-    if (state->b[ft_fmax_b(state)] == state->b[0])
-        pa(state);
-	} */
 }

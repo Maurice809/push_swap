@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:20:02 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/10/10 14:52:13 by tmoret           ###   ########.fr       */
+/*   Updated: 2022/10/10 22:45:34 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 int	ft_sort(t_state *state)
 {
-//	ft_printstack(state);
-//	ft_printstack(state);
 	if (state->a_count == 2)
 	{
 		if (state->a[0] > state->a[1])
@@ -37,10 +35,7 @@ int	ft_sort(t_state *state)
 		ft_sort_09(state);
 	if (state->a_count == 10)
 		ft_sort_10(state);
-//	if (state->a_count > 10 && state->a_count < 101)
-//		ft_sort_quick(state);
-	 if (state->a_count > 10)
-		 ft_sort_radix(state);
-
+	if (state->a_count > 10)
+		ft_sort_radix(state);
 	return (0);
 }

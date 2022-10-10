@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:42:25 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/10/09 19:09:52 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/10/10 15:15:52 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		ft_checarg(char **argv);
 int		ft_checsar(char **argv);
 int		ft_checsar2(char **argv);
 int		ft_str(char **table);
-void    ft_opti_tab(t_state *state);
+void	ft_opti_tab(t_state *state);
 int		ft_error(int nbr);
 int		ft_checinit(const char *str, int p);
 void	ft_intmax(const char *str);
@@ -76,8 +76,6 @@ void	ft_sort_10(t_state *state);
 void	ft_sort_00(t_state *state);
 void	ft_sort_radix(t_state *state);
 void	ft_sort_quick(t_state *state);
-void	ft_sort_quick_a(t_state *state);
-void	ft_sort_quick_b(t_state *state);
 
 int		ft_checktri(t_state *state);
 
