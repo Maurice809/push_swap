@@ -6,51 +6,61 @@
 /*   By: tmoret <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:59:02 by tmoret            #+#    #+#             */
-/*   Updated: 2022/10/10 11:18:18 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/10/07 09:04:17 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
-static int	ft_check_sort_stack_a(t_state *state)
+static unsigned int	check_max_bits(t_state *state)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	int				has_bit;
+	int				j;
 
-	i = 0;
-	while (i < state->a_count - 1)
+	i = 1;
+	while (i != 0)
 	{
-		j = i + 1;
-		if (state->a[i] < state->a[j])
-			i++;
-		else
-			return (0);
+		j = -1;
+		has_bit = 0;
+		while (state->a_count > ++j)
+		{
+			if (state->a[j] & i)
+			{
+				has_bit = 1;
+			}
+		}
+		if (!has_bit)
+			return (i);
+		i <<= 1;
 	}
-	return (1);
+	return (1 << 31);
 }
 
 void	ft_sort_radix(t_state *state)
 {
-	int	size;
-	int	i;
-	int	j;
-	int	max;
+	unsigned int	i;
+	unsigned int	max_bit;
+	int				j;
+	int				count;
 
-	i = 0;
-	max = state->a[ft_fmax(state)];
-	size = state->a_count;
-	while (i < max)
+	max_bit = check_max_bits(state);
+	i = 1;
+	while (i < max_bit)
 	{
-		j = 0;
-		while (j < size && !ft_check_sort_stack_a(state))
+		j = -1;
+		count = state->a_count;
+		while (++j < count)
 		{
-			if ((state->a[0] >> i) & 1)
-				ra(state);
-			else
+			if (!(state->a[state->a_count - 1] & i))
 				pb(state);
-			j++;
+			else
+				ra(state);
 		}
-		i++;
 		while (state->b_count)
+		{
 			pa(state);
+		}
+		i <<= 1;
 	}
 }
