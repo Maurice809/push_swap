@@ -6,7 +6,7 @@
 #    By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 16:49:57 by Maurice809        #+#    #+#              #
-#    Updated: 2022/09/22 16:50:12 by Maurice809       ###   Lausanne.ch        #
+#    Updated: 2022/10/09 18:12:51 by Maurice809       ###   Lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,42 @@ OBJDIR	= ./src/obj
 
 # src / obj files
 SRC		= main.c \
+		  ft_error.c \
+		  ft_checarg.c \
+		  ft_checinit.c \
+		  ft_initmax.c \
+		  ft_initmin.c \
+		  ft_checdouble.c \
+		  ft_initstate.c \
+		  ft_printstack.c \
+		  ft_rotate.c \
+		  ft_rrotate.c \
+		  ft_push.c \
+		  ft_swap.c \
+		  ft_fmin.c \
+		  ft_fmin_b.c \
+		  ft_fmax.c \
+		  ft_fmax_b.c \
+		  ft_sort.c \
+		  ft_sort_03.c \
+		  ft_sort_04.c \
+		  ft_sort_05.c \
+		  ft_sort_06.c \
+		  ft_sort_07.c \
+		  ft_sort_08.c \
+		  ft_sort_09.c \
+		  ft_sort_10.c \
+		  ft_sort_00.c \
+		  ft_checkps.c \
+		  ft_checkpsif.c \
+		  ft_checkpsif_03.c \
+		  ft_checktri.c \
+		  ft_str.c \
+		  ft_sort_radix.c \
+		  ft_sort_quick.c \
+		  ft_sort_quick_a.c \
+		  ft_sort_quick_b.c \
+		  ft_simplify.c \
 
 #		  $(addprefix so_long/,$(shell ls $(SRCDIR)/so_long | grep -E ".+\.c"))
 
