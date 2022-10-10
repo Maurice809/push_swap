@@ -6,7 +6,7 @@
 /*   By: tmoret <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:59:02 by tmoret            #+#    #+#             */
-/*   Updated: 2022/10/10 11:18:18 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/10/10 14:00:31 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -35,7 +35,7 @@ void	ft_sort_radix(t_state *state)
 	int	j;
 	int	max;
 
-	i = 0;
+	i = 0 ;
 	max = state->a[ft_fmax(state)];
 	size = state->a_count;
 	while (i < max)

@@ -6,7 +6,7 @@
 /*   By: Maurice809 <maurice809@hotmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:20:02 by Maurice809        #+#    #+#             */
-/*   Updated: 2022/10/10 11:28:32 by Maurice809       ###   Lausanne.ch       */
+/*   Updated: 2022/10/10 14:52:13 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int	ft_sort(t_state *state)
 		ft_sort_09(state);
 	if (state->a_count == 10)
 		ft_sort_10(state);
-	if (state->a_count > 100)
-		ft_sort_radix(state);
-	if (state->a_count > 10)
-		ft_sort_quick(state);
-//	ft_checkps(state);
+//	if (state->a_count > 10 && state->a_count < 101)
+//		ft_sort_quick(state);
+	 if (state->a_count > 10)
+		 ft_sort_radix(state);
+
 	return (0);
 }
